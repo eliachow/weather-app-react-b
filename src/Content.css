@@ -1,0 +1,57 @@
+video {
+  position: relative;
+  width: 100%;
+}
+
+.PageContent {
+  position: absolute;
+  top: 0;
+}
+
+.Header {
+  position: fixed;
+  width: 100%;
+}
+
+.HeaderTitle {
+  color: white;
+  font-size: 60px;
+  padding-left: 10%;
+  padding-bottom: 20px;
+}
+
+.SearchBar {
+  padding: 0px 10% 10px 10%;
+}
+
+.button {
+  border-radius: 50px;
+}
+
+.button:hover {
+  border-color: #ffe898;
+  border-width: 2px;
+}
+
+.CenterContent {
+  padding-top: 30px;
+  width: 100%;
+  margin-left: 10%;
+}
+
+.MainTemp {
+  color: white;
+  font-size: 65px;
+}
+
+.EachDay {
+  padding-left: 0;
+}
+
+.card {
+  text-align: center;
+}
+
+.HourlyData {
+  text-align: center;
+}
