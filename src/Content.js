@@ -22,9 +22,15 @@ export default function Content(props) {
     });
   }
 
+  function search() {
+    const apiKey = "291d093572471cc9cd6958074405d546";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   function handleSubmit(event) {
-    event.preventDefautl();
-    //search for a city
+    event.preventDefault();
+    search(city);
   }
 
   function handleCityChange(event) {
@@ -70,11 +76,7 @@ export default function Content(props) {
       </div>
     );
   } else {
-    const apiKey = "291d093572471cc9cd6958074405d546";
-    let city = "Vancouver";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-    console.log(apiUrl);
+    search();
     return "Loading...";
   }
 }
