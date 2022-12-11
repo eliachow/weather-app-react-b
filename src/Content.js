@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Content.css";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import cloudVideo from "./media/cloudVideo.mp4";
 import { WiHumidity } from "weather-icons-react";
 import { WiUmbrella } from "weather-icons-react";
@@ -13,7 +14,7 @@ export default function Content() {
     console.log(response.data);
     setWeatherData({
       ready: true,
-      date: "December 11, 2022",
+      date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       city: response.data.name,
@@ -61,7 +62,9 @@ export default function Content() {
                   <div className="MainData">
                     <h1>{weatherData.city}</h1>
                     <h3>
-                      <span>{weatherData.date}</span>
+                      <span>
+                        <FormattedDate date={weatherData.date} />
+                      </span>
                     </h3>
                     <div className="row">
                       <div className="col-5">
@@ -154,7 +157,7 @@ export default function Content() {
                       <ul className="EachDay">
                         <li className="card">
                           <div className="row">
-                            <div className="col-4">Sunday</div>
+                            <div className="col-4 day">Sunday</div>
                             <div className="col-4">
                               <img
                                 src={weatherData.iconUrl}
