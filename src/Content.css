@@ -32,26 +32,3 @@ video {
   border-color: #ffe898;
   border-width: 2px;
 }
-
-.CenterContent {
-  padding-top: 30px;
-  width: 100%;
-  margin-left: 10%;
-}
-
-.MainTemp {
-  color: white;
-  font-size: 65px;
-}
-
-.EachDay {
-  padding-left: 0;
-}
-
-.card {
-  text-align: center;
-}
-
-.HourlyData {
-  text-align: center;
-}

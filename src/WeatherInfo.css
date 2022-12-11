@@ -1,0 +1,56 @@
+.WeatherInfo {
+  position: absolute;
+  width: 100%;
+
+  padding-top: 30px;
+  color: white;
+}
+
+.CenterContent {
+  padding-top: 30px;
+  width: 100%;
+  margin-left: 10%;
+}
+
+.MainCity {
+  font-size: 55px;
+}
+
+.MainIconAndData {
+  padding-left: 20%;
+}
+
+.MainWeatherIcon {
+  width: 100%;
+  height: fit-content;
+  padding-right: 10%;
+}
+
+.MainTemp {
+  font-size: 65px;
+}
+
+.EachDay {
+  padding-left: 0;
+}
+
+.card {
+  text-align: center;
+  color: rgb(110, 110, 110);
+}
+
+.FiveDayTitle {
+  padding-top: 20%;
+  padding-bottom: 20px;
+}
+
+.Day {
+  padding-top: 5%;
+}
+
+.DayTemp {
+  padding-top: 5%;
+}
+.HourlyData {
+  text-align: center;
+}
