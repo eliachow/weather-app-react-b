@@ -1,7 +1,6 @@
 import React from "react";
 import "./WeatherInfo.css";
 import FormattedDate from "./FormattedDate";
-import WeatherIcon from "./WeatherIcon";
 
 import { WiHumidity } from "weather-icons-react";
 import { WiUmbrella } from "weather-icons-react";
@@ -22,9 +21,11 @@ export default function WeatherInfo(props) {
               </h3>
               <div className="row MainIconAndData">
                 <div className="col-5">
-                  <div className="float-left">
-                    <WeatherIcon code={props.data.icon} />
-                  </div>
+                  <img
+                    src={props.data.iconUrl}
+                    alt={props.data.description}
+                    className="MainWeatherIcon"
+                  ></img>
                 </div>
                 <div className="col-6">
                   <span className="MainTemp">
