@@ -6,7 +6,8 @@
 }
 
 .Header {
-  position: relative;
+  position: fixed;
+  width: 100%;
 }
 
 .HeaderTitle {
