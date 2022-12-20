@@ -6,7 +6,7 @@ import Content from "./Content";
 export default function App() {
   return (
     <div className="App">
-      <Content defaultCity="Berlin" />
+      <Content defaultCity="Vancouver" />
       <footer>
         <a
           href="https://github.com/eliachow/weather-app-react-b"

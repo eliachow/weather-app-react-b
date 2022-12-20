@@ -1,20 +1,15 @@
-video {
-  position: relative;
-  width: fit-content;
-}
-
 .PageContent {
   position: absolute;
   top: 0;
-}
-
-.Header {
-  position: fixed;
+  color: white;
   width: 100%;
 }
 
+.Header {
+  position: relative;
+}
+
 .HeaderTitle {
-  color: white;
   font-size: 60px;
   padding-left: 10%;
   padding-bottom: 20px;

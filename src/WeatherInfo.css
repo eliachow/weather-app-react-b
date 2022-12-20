@@ -1,11 +1,3 @@
-.WeatherInfo {
-  position: absolute;
-  width: 100%;
-
-  padding-top: 30px;
-  color: white;
-}
-
 .CenterContent {
   padding-top: 30px;
   width: 100%;
@@ -21,9 +13,7 @@
 }
 
 .MainWeatherIcon {
-  width: 100%;
-  height: fit-content;
-  padding-right: 10%;
+  width: 90%;
 }
 
 .MainTemp {

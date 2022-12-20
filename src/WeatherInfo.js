@@ -8,7 +8,7 @@ import { WiCloudyGusts } from "weather-icons-react";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="WeatherInfo">
+    <div className="WeatherInfo ">
       <div className="CenterContent">
         <div className="row">
           <div className="col-7">

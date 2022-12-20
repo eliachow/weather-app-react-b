@@ -40,7 +40,9 @@ export default function Content(props) {
   if (weatherData.ready) {
     return (
       <div className="Content">
-        <video src={cloudVideo} autoPlay loop muted />
+        <div>
+          <video src={cloudVideo} autoPlay loop muted />
+        </div>
         <div className="PageContent">
           <div className="Header">
             <div className="HeaderTitle">Weather Forecast App</div>
