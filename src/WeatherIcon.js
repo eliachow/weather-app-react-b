@@ -11,26 +11,42 @@ import { WiSnowflakeCold } from "react-icons/wi";
 import { WiWindy } from "react-icons/wi";
 
 export default function WeatherIcon(props) {
-  const codeMapping = {
-    "01d": "WiDaySunny", //clear sky
-    "01n": "WiMoonAltNew", //clear sky night
-    "02d": "WiDayCloudy", //few clouds
-    "02n": "WiDayCloudy", //few clouds night
-    "03d": "WiCloud", //scattered clouds
-    "03n": "WiCloud", //scattered clouds night
-    "04d": "WiCloudy", //broken clouds
-    "04n": "WiCloudy", //broken clouds night
-    "09d": "WiShowers", //shower rain
-    "09n": "WiShowers", //shower rain night
-    "10d": "WiRain", //rain
-    "10n": "WiRain", //rain night
-    "11d": "WiThunderstorm", //thunderstorm
-    "11n": "WiThunderstorm", //thunderstorm night
-    "13d": "WiSnowflakeCold", //snow
-    "13n": "WiSnowflakeCold", //snow night
-    "50d": "WiWindy", //mist
-    "50n": "WiWindy", //mist night
-  };
-
-  return <${codeMapping[props.code]} size={24} color="#000" />;
+  switch (props.code) {
+    case "01d":
+      return <WiDaySunny size={24} color="#000" />;
+    case "01n":
+      return <WiMoonAltNew size={24} color="#000" />;
+    case "02d":
+      return <WiDayCloudy size={24} color="#000" />;
+    case "02n":
+      return <WiDayCloudy size={24} color="#000" />;
+    case "03d":
+      return <WiCloud size={24} color="#000" />;
+    case "03n":
+      return <WiCloud size={24} color="#000" />;
+    case "04d":
+      return <WiCloudy size={24} color="#000" />;
+    case "04n":
+      return <WiCloudy size={24} color="#000" />;
+    case "09d":
+      return <WiShowers size={24} color="#000" />;
+    case "09n":
+      return <WiShowers size={24} color="#000" />;
+    case "10d":
+      return <WiRain size={24} color="#000" />;
+    case "10n":
+      return <WiRain size={24} color="#000" />;
+    case "11d":
+      return <WiThunderstorm size={24} color="#000" />;
+    case "11n":
+      return <WiThunderstorm size={24} color="#000" />;
+    case "13d":
+      return <WiSnowflakeCold size={24} color="#000" />;
+    case "13n":
+      return <WiSnowflakeCold size={24} color="#000" />;
+    case "50d":
+      return <WiWindy size={24} color="#000" />;
+    case "50n":
+      return <WiWindy size={24} color="#000" />;
+  }
 }
