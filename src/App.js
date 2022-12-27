@@ -1,12 +1,11 @@
 import "./App.css";
-import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Content from "./Content";
 
 export default function App() {
   return (
     <div className="App">
-      <Content defaultCity="Vancouver" />
+      <Content defaultCity="Berlin" />
       <footer>
         <a
           href="https://github.com/eliachow/weather-app-react-b"

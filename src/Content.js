@@ -10,6 +10,7 @@ export default function Content(props) {
 
   function handleResponse(response) {
     console.log(response.data);
+    console.log(response.data.name);
     setWeatherData({
       ready: true,
       date: new Date(response.data.dt * 1000),
@@ -64,7 +65,7 @@ export default function Content(props) {
                   value={"Search"}
                 />
               </div>
-              <div class="col-3">
+              <div className="col-3">
                 <input
                   type="submit"
                   className="form-control button"

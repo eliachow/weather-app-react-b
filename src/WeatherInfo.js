@@ -8,6 +8,7 @@ import { WiUmbrella } from "weather-icons-react";
 import { WiCloudyGusts } from "weather-icons-react";
 
 export default function WeatherInfo(props) {
+  console.log({ props });
   return (
     <div className="WeatherInfo ">
       <div className="CenterContent">
@@ -22,7 +23,6 @@ export default function WeatherInfo(props) {
               </h3>
               <div className="row MainIconAndData">
                 <div className="col-5">
-                  <WeatherInfo code={props.WeatherData} />
                   <div className="float-left">
                     <WeatherIcon code={props.data.icon} />
                   </div>
