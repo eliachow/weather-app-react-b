@@ -2,6 +2,7 @@ import React from "react";
 import "./WeatherInfo.css";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 import { WiHumidity } from "weather-icons-react";
 import { WiUmbrella } from "weather-icons-react";
@@ -28,10 +29,8 @@ export default function WeatherInfo(props) {
                   </div>
                 </div>
                 <div className="col-6">
-                  <span className="MainTemp">
-                    {Math.round(props.data.temperature)}{" "}
-                  </span>
-                  <span>ᵒC</span> | <span>ᵒF</span>
+                  <WeatherTemperature celsius={props.data.temperature} />
+
                   <div>
                     <span>
                       <WiUmbrella size={40} color="white" />
