@@ -4,6 +4,7 @@ import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 import WindSpeed from "./WindSpeed";
+import Hourly from "./Hourly";
 
 import { WiHumidity } from "weather-icons-react";
 import { WiUmbrella } from "weather-icons-react";
@@ -56,51 +57,11 @@ export default function WeatherInfo(props) {
               </div>
               <br />
               <br />
-              <div className="Hourly">
-                <h3 className="HourlyTitle">Hourly Forecast</h3>
-                <div className="row">
-                  <div className="col-sm HourlyData">
-                    <img
-                      src={props.data.iconUrl}
-                      alt={props.data.description}
-                    ></img>
-                    <div>Hour</div>
-                    <div>5 °C</div>
-                  </div>
-                  <div className="col-sm HourlyData">
-                    <img
-                      src={props.data.iconUrl}
-                      alt={props.data.description}
-                    ></img>
-                    <div>Hour</div>
-                    <div>5 °C</div>
-                  </div>
-                  <div className="col-sm HourlyData">
-                    <img
-                      src={props.data.iconUrl}
-                      alt={props.data.description}
-                    ></img>
-                    <div>Hour</div>
-                    <div>5 °C</div>
-                  </div>
-                  <div className="col-sm HourlyData">
-                    <img
-                      src={props.data.iconUrl}
-                      alt={props.data.description}
-                    ></img>
-                    <div>Hour</div>
-                    <div>5 °C</div>
-                  </div>
-                  <div className="col-sm HourlyData">
-                    <img
-                      src={props.data.iconUrl}
-                      alt={props.data.description}
-                    ></img>
-                    <div>Hour</div>
-                    <div>5 °C</div>
-                  </div>
-                </div>
-              </div>
+              <br />
+              <br />
+              <br />
+              <br />
+              <Hourly coord={props.data.coord} />
             </div>
           </div>
           <div className="col-5">
