@@ -3,6 +3,7 @@ import "./WeatherInfo.css";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import WindSpeed from "./WindSpeed";
 
 import { WiHumidity } from "weather-icons-react";
 import { WiUmbrella } from "weather-icons-react";
@@ -49,7 +50,7 @@ export default function WeatherInfo(props) {
                     <span>
                       <WiCloudyGusts size={40} color="white" />
                     </span>
-                    Wind Speed: <span>{Math.round(props.data.wind)} kmh</span>
+                    Wind Speed: <WindSpeed kmh={props.data.wind} />
                   </div>
                 </div>
               </div>
