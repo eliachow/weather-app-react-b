@@ -48,5 +48,7 @@ export default function WeatherIcon(props) {
       return <WiWindy size={200} color="white" />;
     case "50n":
       return <WiWindy size={200} color="white" />;
+    default:
+      return null;
   }
 }
