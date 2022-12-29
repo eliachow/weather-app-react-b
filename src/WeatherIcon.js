@@ -13,41 +13,41 @@ import { WiWindy } from "react-icons/wi";
 export default function WeatherIcon(props) {
   switch (props.code) {
     case "01d":
-      return <WiDaySunny size={200} color="white" />;
+      return <WiDaySunny />;
     case "01n":
-      return <WiMoonAltNew size={200} color="white" />;
+      return <WiMoonAltNew />;
     case "02d":
-      return <WiDayCloudy size={200} color="white" />;
+      return <WiDayCloudy />;
     case "02n":
-      return <WiDayCloudy size={200} color="white" />;
+      return <WiDayCloudy />;
     case "03d":
-      return <WiCloud size={200} color="white" />;
+      return <WiCloud />;
     case "03n":
-      return <WiCloud size={200} color="white" />;
+      return <WiCloud />;
     case "04d":
-      return <WiCloudy size={200} color="white" />;
+      return <WiCloudy />;
     case "04n":
-      return <WiCloudy size={200} color="white" />;
+      return <WiCloudy />;
     case "09d":
-      return <WiShowers size={200} color="white" />;
+      return <WiShowers />;
     case "09n":
-      return <WiShowers size={200} color="white" />;
+      return <WiShowers />;
     case "10d":
-      return <WiRain size={200} color="white" />;
+      return <WiRain />;
     case "10n":
-      return <WiRain size={200} color="white" />;
+      return <WiRain />;
     case "11d":
-      return <WiThunderstorm size={200} color="white" />;
+      return <WiThunderstorm />;
     case "11n":
-      return <WiThunderstorm size={200} color="white" />;
+      return <WiThunderstorm />;
     case "13d":
-      return <WiSnowflakeCold size={200} color="white" />;
+      return <WiSnowflakeCold />;
     case "13n":
-      return <WiSnowflakeCold size={200} color="white" />;
+      return <WiSnowflakeCold />;
     case "50d":
-      return <WiWindy size={200} color="white" />;
+      return <WiWindy />;
     case "50n":
-      return <WiWindy size={200} color="white" />;
+      return <WiWindy />;
     default:
       return null;
   }

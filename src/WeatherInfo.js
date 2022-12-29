@@ -5,6 +5,7 @@ import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 import WindSpeed from "./WindSpeed";
 import Hourly from "./Hourly";
+import FiveDay from "./FiveDay";
 
 import { WiHumidity } from "weather-icons-react";
 import { WiUmbrella } from "weather-icons-react";
@@ -26,7 +27,7 @@ export default function WeatherInfo(props) {
               </h3>
               <div className="row MainIconAndData">
                 <div className="col-5">
-                  <div className="float-left">
+                  <div className="float-left MainWeatherIcon">
                     <WeatherIcon code={props.data.icon} />
                   </div>
                 </div>
@@ -55,90 +56,14 @@ export default function WeatherInfo(props) {
                   </div>
                 </div>
               </div>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
+
               <Hourly coord={props.data.coord} />
             </div>
           </div>
           <div className="col-5">
             <div className="col-6">
               <h3 className="FiveDayTitle">5 Day Forecast</h3>
-              <div>
-                <ul className="EachDay">
-                  <li className="card">
-                    <div className="row">
-                      <div className="col-4 Day">Sunday</div>
-                      <div className="col-4">
-                        <img
-                          src={props.data.iconUrl}
-                          alt={props.data.description}
-                        ></img>
-                      </div>
-                      <div className="col-4 DayTemp">5ᵒ</div>
-                    </div>
-                  </li>
-                </ul>
-                <ul className="EachDay">
-                  <li className="card">
-                    <div className="row">
-                      <div className="col-4 Day">Sunday</div>
-                      <div className="col-4">
-                        <img
-                          src={props.data.iconUrl}
-                          alt={props.data.description}
-                        ></img>
-                      </div>
-                      <div className="col-4 DayTemp">5ᵒ</div>
-                    </div>
-                  </li>
-                </ul>
-                <ul className="EachDay">
-                  <li className="card">
-                    <div className="row">
-                      <div className="col-4 Day">Sunday</div>
-                      <div className="col-4">
-                        <img
-                          src={props.data.iconUrl}
-                          alt={props.data.description}
-                        ></img>
-                      </div>
-                      <div className="col-4 DayTemp">5ᵒ</div>
-                    </div>
-                  </li>
-                </ul>
-                <ul className="EachDay">
-                  <li className="card">
-                    <div className="row">
-                      <div className="col-4 Day">Sunday</div>
-                      <div className="col-4">
-                        <img
-                          src={props.data.iconUrl}
-                          alt={props.data.description}
-                        ></img>
-                      </div>
-                      <div className="col-4 DayTemp">5ᵒ</div>
-                    </div>
-                  </li>
-                </ul>
-                <ul className="EachDay">
-                  <li className="card">
-                    <div className="row">
-                      <div className="col-4 Day">Sunday</div>
-                      <div className="col-4">
-                        <img
-                          src={props.data.iconUrl}
-                          alt={props.data.description}
-                        ></img>
-                      </div>
-                      <div className="col-4 DayTemp">5ᵒ</div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+              <FiveDay coord={props.data.coord} />
             </div>
           </div>
         </div>
