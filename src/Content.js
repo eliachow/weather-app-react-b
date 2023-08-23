@@ -43,7 +43,7 @@ export default function Content(props) {
   if (weatherData.ready) {
     return (
       <div className="Content">
-        <div>
+        <div className="video-wrapper">
           <video src={cloudVideo} autoPlay loop muted />
         </div>
         <div className="PageContent">
@@ -77,6 +77,17 @@ export default function Content(props) {
 
             <WeatherInfo data={weatherData} />
           </div>
+        
+        <footer>
+          <a
+            href="https://github.com/eliachow/weather-app-react-b"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open source code
+          </a>{" "}
+          by Elia Chow
+        </footer>
         </div>
       </div>
     );

@@ -1,7 +1,12 @@
 .CenterContent {
   padding-top: 30px;
-  width: 100%;
+  
   margin-left: 10%;
+
+}
+
+.subCenterContent {
+  margin-right: 0px;
 }
 
 .MainCity {

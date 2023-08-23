@@ -1,3 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.Content {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 .PageContent {
   position: absolute;
   top: 0;
@@ -5,9 +16,7 @@
   width: 100%;
 }
 
-.Header {
-  position: relative;
-}
+
 
 .HeaderTitle {
   font-size: 60px;
@@ -17,13 +26,37 @@
 
 .SearchBar {
   padding: 0px 10% 10px 10%;
+  margin-right: 0px;
 }
 
 .button {
   border-radius: 50px;
+  border-width: 2px;
+  border-color: transparent;
 }
 
 .button:hover {
   border-color: #ffe898;
   border-width: 2px;
 }
+
+.video-wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
