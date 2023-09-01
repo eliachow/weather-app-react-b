@@ -1,1 +1,13 @@
+.icon {
+  font-size: 10;
+  line-height: 0;
+}
 
+.FiveDayCard {
+  margin-bottom: 10px;
+}
+
+.FiveDaySection{
+  margin-right: 0px;
+  margin-left: 125px;
+}
