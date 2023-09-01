@@ -61,7 +61,7 @@ export default function WeatherInfo(props) {
             </div>
           </div>
           <div className="col-5">
-            <div className="col-6">
+            <div className="col-6 FiveDaySection">
               <h3 className="FiveDayTitle">5 Day Forecast</h3>
               <FiveDay coord={props.data.coord} />
             </div>

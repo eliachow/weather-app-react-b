@@ -21,15 +21,13 @@ export default function (props) {
             {fiveDayData.map((dailyForecast, index) => {
               if (index < 5) {
               return(
-              <li className="card">
+              <li className="card FiveDayCard">
                 <div className="row" key={index}>
                   <FiveData data={dailyForecast} />
                 </div>
               </li>
             )}})}
-          </ul>
-          
-          
+          </ul> 
         </div>
       </div>
     );
