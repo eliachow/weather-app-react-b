@@ -48,7 +48,7 @@ export default function Content(props) {
         </div>
         <div className="PageContent">
           <div className="Header">
-            <div className="HeaderTitle">Weather Forecast App</div>
+            <div className="HeaderTitle">Weather Watch</div>
             <form className="row SearchBar" onSubmit={handleSubmit}>
               <div className="col-6">
                 <input
