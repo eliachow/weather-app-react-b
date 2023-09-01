@@ -18,56 +18,18 @@ export default function (props) {
       <div className="FiveDay">
         <div>
           <ul className="EachDay">
-            <li className="card">
-              <div className="row">
-                <FiveData data={fiveDayData[0]} />
-              </div>
-            </li>
-          </ul>
-          <ul className="EachDay">
-            <li className="card">
-              <div className="row">
-                <div className="col-4 Day">{fiveDayData[0].dt}</div>
-                <div className="col-4">
-                  <div>{fiveDayData[0].weather[0].icon}</div>
+            {fiveDayData.map((dailyForecast, index) => {
+              if (index < 5) {
+              return(
+              <li className="card">
+                <div className="row" key={index}>
+                  <FiveData data={dailyForecast} />
                 </div>
-                <div className="col-4 DayTemp">{fiveDayData[0].temp.day}</div>
-              </div>
-            </li>
+              </li>
+            )}})}
           </ul>
-          <ul className="EachDay">
-            <li className="card">
-              <div className="row">
-                <div className="col-4 Day">Sunday</div>
-                <div className="col-4">
-                  <img src="/" alt="/"></img>
-                </div>
-                <div className="col-4 DayTemp">5ᵒ</div>
-              </div>
-            </li>
-          </ul>
-          <ul className="EachDay">
-            <li className="card">
-              <div className="row">
-                <div className="col-4 Day">Sunday</div>
-                <div className="col-4">
-                  <img src="/" alt="/"></img>
-                </div>
-                <div className="col-4 DayTemp">5ᵒ</div>
-              </div>
-            </li>
-          </ul>
-          <ul className="EachDay">
-            <li className="card">
-              <div className="row">
-                <div className="col-4 Day">Sunday</div>
-                <div className="col-4">
-                  <img src="/" alt="/"></img>
-                </div>
-                <div className="col-4 DayTemp">5ᵒ</div>
-              </div>
-            </li>
-          </ul>
+          
+          
         </div>
       </div>
     );
