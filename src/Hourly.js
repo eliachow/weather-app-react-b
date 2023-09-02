@@ -15,34 +15,17 @@ export default function Hourly(props) {
   }
 
   if (loaded) {
-    console.log(hourlyData);
     return (
       <div className="Hourly">
         <h3 className="HourlyTitle">Hourly Forecast</h3>
         <div className="row">
-          <div className="col-sm HourlyData">
-            <Hour data={hourlyData[0]} />
-          </div>
-          <div className="col-sm HourlyData">
-            <img src="/" alt=""></img>
-            <div>Hour</div>
-            <div>5 °C</div>
-          </div>
-          <div className="col-sm HourlyData">
-            <img src="/" alt=""></img>
-            <div>Hour</div>
-            <div>5 °C</div>
-          </div>
-          <div className="col-sm HourlyData">
-            <img src="/" alt=""></img>
-            <div>Hour</div>
-            <div>5 °C</div>
-          </div>
-          <div className="col-sm HourlyData">
-            <img src="/" alt=""></img>
-            <div>Hour</div>
-            <div>5 °C</div>
-          </div>
+          {hourlyData.map((hourlyForecast, index) => {
+            if (index < 7) {
+              return (<div className="col-sm HourlyData" key={index}>
+                <Hour data={hourlyForecast} />
+              </div>
+          )}})}
+         
         </div>
       </div>
     );

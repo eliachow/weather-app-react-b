@@ -9,8 +9,6 @@ export default function Content(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    console.log(response.data);
-    console.log(response.data.name);
     setWeatherData({
       ready: true,
       coord: response.data.coord,
