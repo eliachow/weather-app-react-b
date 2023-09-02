@@ -33,7 +33,7 @@ export default function WeatherInfo(props) {
                 <div className="col-6">
                   <WeatherTemperature celsius={props.data.temperature} />
 
-                  <div>
+                  <div className="currentDetails">
                     <span>
                       <WiUmbrella size={40} color="white" />
                     </span>
@@ -41,13 +41,13 @@ export default function WeatherInfo(props) {
                       {props.data.description}
                     </span>
                   </div>
-                  <div>
+                  <div className="currentDetails">
                     <span>
                       <WiHumidity size={40} color="white" />
                     </span>
                     Humidity: <span>{props.data.humidity}%</span>
                   </div>
-                  <div>
+                  <div className="currentDetails">
                     <span>
                       <WiCloudyGusts size={40} color="white" />
                     </span>

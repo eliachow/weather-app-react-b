@@ -57,3 +57,16 @@ video {
   left: 0;
 }
 
+footer {
+  padding: 50px;
+}
+
+.nameLink {
+  text-decoration: none;
+  color: #aef2ff;
+  font-size: large;
+}
+
+.nameLink:hover {
+  color: white;
+}

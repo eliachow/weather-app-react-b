@@ -17,8 +17,8 @@ export default function WindSpeed(props) {
     return (
       <span className="WindSpeed">
         <span>
-          {Math.round(props.kmh)} km/h |{" "}
-          <a href="/" onClick={convertToMph}>
+          {Math.round(props.kmh)} km/h{" "}
+          <a href="/" onClick={convertToMph} className="unitLink">
             mph
           </a>
         </span>
@@ -30,10 +30,10 @@ export default function WindSpeed(props) {
       <span className="WindSpeed">
         <span>
           {Math.round(mph)}{" "}
-          <a href="/" onClick={convertToKph}>
+          mph{" "}
+          <a href="/" onClick={convertToKph} className="unitLink">
             km/h
-          </a>{" "}
-          | mph
+          </a>
         </span>
       </span>
     );

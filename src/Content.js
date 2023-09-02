@@ -77,14 +77,16 @@ export default function Content(props) {
           </div>
         
         <footer>
+            Open source code by 
+            {" "}
           <a
             href="https://github.com/eliachow/weather-app-react-b"
             target="_blank"
             rel="noopener noreferrer"
-          >
-            Open source code
-          </a>{" "}
-          by Elia Chow
+            className="nameLink">
+            eChow
+          </a>
+          
         </footer>
         </div>
       </div>
