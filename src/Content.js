@@ -7,6 +7,7 @@ import cloudVideo from "./media/cloudVideo.mp4";
 export default function Content(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [weatherUnit, setWeatherUnit] = useState("celsius");
 
   function handleResponse(response) {
     setWeatherData({
@@ -37,6 +38,13 @@ export default function Content(props) {
   function handleCityChange(event) {
     setCity(event.target.value);
   }
+
+  // update celsius & fahrenheit
+  const getWeatherUnit = (unit) => {
+    setWeatherUnit(unit)
+  }
+
+  console.log("☁🌧🌨weatherUnit: ", weatherUnit)
 
   if (weatherData.ready) {
     return (
@@ -73,7 +81,7 @@ export default function Content(props) {
               </div>
             </form>
 
-            <WeatherInfo data={weatherData} />
+            <WeatherInfo data={weatherData} getWeatherUnit={getWeatherUnit} weatherUnit={weatherUnit}/>
           </div>
         
         <footer>

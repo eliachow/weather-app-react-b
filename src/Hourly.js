@@ -5,6 +5,7 @@ import WeatherIcon from "./WeatherIcon";
 import Hour from "./Hour";
 
 export default function Hourly(props) {
+  const { weatherUnit } = props;
   let [loaded, setLoaded] = useState(false);
   let [hourlyData, setHourlyData] = useState(null);
 
@@ -22,7 +23,7 @@ export default function Hourly(props) {
           {hourlyData.map((hourlyForecast, index) => {
             if (index > 0 && index < 8) {
               return (<div className="col-sm HourlyData" key={index}>
-                <Hour data={hourlyForecast} />
+                <Hour data={hourlyForecast} weatherUnit={weatherUnit}/>
               </div>
           )}})}
          
