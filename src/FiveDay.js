@@ -12,7 +12,6 @@ export default function (props) {
   }
 
   if (loaded) {
-    console.log("👉fiveDayData: ", fiveDayData);
     return (
       <div className="FiveDay">
         <div>

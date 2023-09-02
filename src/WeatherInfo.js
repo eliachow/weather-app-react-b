@@ -12,6 +12,8 @@ import { WiUmbrella } from "weather-icons-react";
 import { WiCloudyGusts } from "weather-icons-react";
 
 export default function WeatherInfo(props) {
+  const { getWeatherUnit, weatherUnit } = props
+
   return (
     <div className="WeatherInfo ">
       <div className="CenterContent">
@@ -31,7 +33,7 @@ export default function WeatherInfo(props) {
                   </div>
                 </div>
                 <div className="col-6">
-                  <WeatherTemperature celsius={props.data.temperature} />
+                  <WeatherTemperature celsius={props.data.temperature} getWeatherUnit={getWeatherUnit} />
 
                   <div className="currentDetails">
                     <span>
@@ -56,7 +58,7 @@ export default function WeatherInfo(props) {
                 </div>
               </div>
 
-              <Hourly coord={props.data.coord} />
+              <Hourly coord={props.data.coord} weatherUnit={weatherUnit}/>
             </div>
           </div>
           <div className="col-5">

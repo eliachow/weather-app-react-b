@@ -4,9 +4,16 @@ import WeatherIcon from "./WeatherIcon";
 import "./Hour.css";
 
 export default function Hour(props) {
+  const { weatherUnit } = props;
+
   function celsius() {
     let celsiusTemperature = Math.round(props.data.temp);
     return celsiusTemperature;
+  }
+
+  function fahrenheit() {
+    let fahrenheitTemperature = Math.round((props.data.temp * 9)/ 5 + 32)
+    return fahrenheitTemperature
   }
 
 
@@ -27,7 +34,9 @@ export default function Hour(props) {
         <WeatherIcon code={props.data.weather[0].icon} />
       </div>
       <div>{convertTime(props.data.dt)}</div>
-      <div>{celsius()} °C</div>
+      {weatherUnit === "celsius" ? (
+        <div>{celsius()} °C</div>
+      ) : <div>{fahrenheit()} °F</div>}
     </div>
   );
 }
