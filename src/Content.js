@@ -44,8 +44,6 @@ export default function Content(props) {
     setWeatherUnit(unit)
   }
 
-  console.log("☁🌧🌨weatherUnit: ", weatherUnit)
-
   if (weatherData.ready) {
     return (
       <div className="Content">

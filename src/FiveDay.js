@@ -3,6 +3,7 @@ import Axios from "axios";
 import FiveData from "./FiveData";
 
 export default function (props) {
+  const { weatherUnit } = props;
   let [loaded, setLoaded] = useState(false);
   let [fiveDayData, setFiveDayData] = useState(null);
 
@@ -21,7 +22,7 @@ export default function (props) {
               return(
               <li className="card FiveDayCard">
                 <div className="row" key={index}>
-                  <FiveData data={dailyForecast} />
+                  <FiveData data={dailyForecast} weatherUnit={weatherUnit}/>
                 </div>
               </li>
             )}})}

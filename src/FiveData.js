@@ -3,14 +3,26 @@ import WeatherIcon from "./WeatherIcon";
 import "./FiveData.css";
 
 export default function FiveData(props) {
-  function maxTemperature() {
+  const { weatherUnit } = props;
+
+  function maxTemperatureCelsius() {
     let maxTemp = Math.round(props.data.temp.max);
-    return `${maxTemp}ᵒ`;
+    return `${maxTemp}ᵒC`;
   }
 
-  function minTemperature() {
+  function minTemperatureCelsius() {
     let minTemp = Math.round(props.data.temp.min);
-    return `${minTemp}ᵒ`;
+    return `${minTemp}ᵒC`;
+  }
+
+  function maxTemperatureFahrenheit () {
+    let maxTemp = Math.round((props.data.temp.max * 9) / 5 + 32);
+    return `${maxTemp}ᵒF`;
+  }
+
+  function minTemperatureFahrenheit() {
+    let minTemp = Math.round((props.data.temp.min * 9) / 5 + 32);
+    return `${minTemp}ᵒF`;
   }
 
   function day() {
@@ -37,7 +49,11 @@ export default function FiveData(props) {
         <WeatherIcon code={props.data.weather[0].icon} />
       </span>
       <span className="col-4 DayTemp">
-        {maxTemperature()} / {minTemperature()}
+        {weatherUnit === "celsius" ? (
+          `${maxTemperatureCelsius()} / ${minTemperatureCelsius()}`
+        ) : (
+          `${maxTemperatureFahrenheit()} / ${minTemperatureFahrenheit()}`
+        )}
       </span>
     </div>
   );
