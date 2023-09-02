@@ -7,13 +7,12 @@ export default function (props) {
   let [fiveDayData, setFiveDayData] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data);
     setFiveDayData(response.data.daily);
     setLoaded(true);
   }
 
   if (loaded) {
-    console.log(fiveDayData);
+    console.log("👉fiveDayData: ", fiveDayData);
     return (
       <div className="FiveDay">
         <div>

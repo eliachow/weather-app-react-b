@@ -9,10 +9,16 @@ export default function Hour(props) {
     return celsiusTemperature;
   }
 
-  function convertTime() {
-    let newTime = new Date(props.data.dt * 60);
-    let time = newTime.getHours();
-    return time;
+
+  function convertTime(timeStampInSecs) {
+    const newTime = new Date(timeStampInSecs * 1000)
+
+    const hours = newTime.getHours();
+    const minutes = newTime.getMinutes();
+
+    const formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+
+    return formattedTime;
   }
 
   return (
@@ -20,7 +26,7 @@ export default function Hour(props) {
       <div className="icon">
         <WeatherIcon code={props.data.weather[0].icon} />
       </div>
-      <div>{convertTime()}</div>
+      <div>{convertTime(props.data.dt)}</div>
       <div>{celsius()} °C</div>
     </div>
   );

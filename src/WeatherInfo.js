@@ -12,7 +12,6 @@ import { WiUmbrella } from "weather-icons-react";
 import { WiCloudyGusts } from "weather-icons-react";
 
 export default function WeatherInfo(props) {
-  console.log({ props });
   return (
     <div className="WeatherInfo ">
       <div className="CenterContent">
