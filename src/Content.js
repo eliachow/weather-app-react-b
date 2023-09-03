@@ -7,7 +7,7 @@ import cloudVideo from "./media/cloudVideo.mp4";
 export default function Content(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
-  const [weatherUnit, setWeatherUnit] = useState("celsius");
+  const [weatherUnit, setWeatherUnit] = useState("celsius")
 
   function handleResponse(response) {
     setWeatherData({
@@ -27,16 +27,19 @@ export default function Content(props) {
   function search() {
     const apiKey = "291d093572471cc9cd6958074405d546";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleResponse); 
   }
 
   function handleSubmit(event) {
     event.preventDefault();
     search(city);
+    
+    document.getElementById("searchValue").value = "";
   }
+  
 
-  function handleCityChange(event) {
-    setCity(event.target.value);
+  function handleCityChange(e) {
+    setCity(e.target.value);
   }
 
   // update celsius & fahrenheit
@@ -58,10 +61,11 @@ export default function Content(props) {
               <div className="col-6">
                 <input
                   type="search"
+                  id="searchValue"
                   className="form-control button"
                   placeholder="Enter a city"
                   autoFocus="on"
-                  onChange={handleCityChange}
+                  onChange={handleCityChange} 
                 />
               </div>
               <div className="col-3">

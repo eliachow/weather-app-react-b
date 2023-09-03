@@ -10,7 +10,6 @@ export default function Hourly(props) {
   let [hourlyData, setHourlyData] = useState(null);
 
   function handleResponse(response) {
-    console.log("📍Hourly response: ", response)
     setHourlyData(response.data.hourly);
     setLoaded(true);
   }
