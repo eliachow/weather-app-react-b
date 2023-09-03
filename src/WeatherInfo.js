@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./WeatherInfo.css";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
@@ -14,6 +14,17 @@ import { WiCloudyGusts } from "weather-icons-react";
 export default function WeatherInfo(props) {
   const { data, getWeatherUnit, weatherUnit } = props
 
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
+
+  // fetch current date/time
+  function updateCurrentDateTime() {
+    setCurrentDateTime(new Date());
+  }
+
+  useEffect(() => {
+    updateCurrentDateTime();
+  },[data])
+
   return (
     <div className="WeatherInfo ">
       <div className="CenterContent">
@@ -23,7 +34,7 @@ export default function WeatherInfo(props) {
               <h1 className="MainCity">{data.city}</h1>
               <h3>
                 <span>
-                  <FormattedDate date={data.date} />
+                  <FormattedDate date={currentDateTime} />
                 </span>
               </h3>
               <div className="row MainIconAndData">
