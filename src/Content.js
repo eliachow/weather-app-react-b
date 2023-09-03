@@ -44,6 +44,7 @@ export default function Content(props) {
     setWeatherUnit(unit)
   }
 
+
   if (weatherData.ready) {
     return (
       <div className="Content">

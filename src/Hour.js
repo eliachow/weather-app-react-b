@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 //AKA WeatherForecastDay.js
 import WeatherIcon from "./WeatherIcon";
 import "./Hour.css";
@@ -27,6 +27,7 @@ export default function Hour(props) {
 
     return formattedTime;
   }
+
 
   return (
     <div className="Hour">

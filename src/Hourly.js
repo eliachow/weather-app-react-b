@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Hourly.css";
 import Axios from "axios";
 import WeatherIcon from "./WeatherIcon";
@@ -10,10 +10,15 @@ export default function Hourly(props) {
   let [hourlyData, setHourlyData] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data);
+    console.log("📍Hourly response: ", response)
     setHourlyData(response.data.hourly);
     setLoaded(true);
   }
+
+  useEffect(() => {
+    setLoaded(false);
+  },[props.coord])
+
 
   if (loaded) {
     return (

@@ -12,7 +12,7 @@ import { WiUmbrella } from "weather-icons-react";
 import { WiCloudyGusts } from "weather-icons-react";
 
 export default function WeatherInfo(props) {
-  const { getWeatherUnit, weatherUnit } = props
+  const { data, getWeatherUnit, weatherUnit } = props
 
   return (
     <div className="WeatherInfo ">
@@ -20,51 +20,51 @@ export default function WeatherInfo(props) {
         <div className="row subCenterContent">
           <div className="col-7">
             <div className="MainData">
-              <h1 className="MainCity">{props.data.city}</h1>
+              <h1 className="MainCity">{data.city}</h1>
               <h3>
                 <span>
-                  <FormattedDate date={props.data.date} />
+                  <FormattedDate date={data.date} />
                 </span>
               </h3>
               <div className="row MainIconAndData">
                 <div className="col-5">
                   <div className="float-left MainWeatherIcon">
-                    <WeatherIcon code={props.data.icon} />
+                    <WeatherIcon code={data.icon} />
                   </div>
                 </div>
                 <div className="col-6">
-                  <WeatherTemperature celsius={props.data.temperature} getWeatherUnit={getWeatherUnit} />
+                  <WeatherTemperature celsius={data.temperature} getWeatherUnit={getWeatherUnit} />
 
                   <div className="currentDetails">
                     <span>
                       <WiUmbrella size={40} color="white" />
                     </span>
                     <span className="text-capitalize">
-                      {props.data.description}
+                      {data.description}
                     </span>
                   </div>
                   <div className="currentDetails">
                     <span>
                       <WiHumidity size={40} color="white" />
                     </span>
-                    Humidity: <span>{props.data.humidity}%</span>
+                    Humidity: <span>{data.humidity}%</span>
                   </div>
                   <div className="currentDetails">
                     <span>
                       <WiCloudyGusts size={40} color="white" />
                     </span>
-                    Wind Speed: <WindSpeed kmh={props.data.wind} />
+                    Wind Speed: <WindSpeed kmh={data.wind} />
                   </div>
                 </div>
               </div>
 
-              <Hourly coord={props.data.coord} weatherUnit={weatherUnit}/>
+              <Hourly coord={data.coord} weatherUnit={weatherUnit}/>
             </div>
           </div>
           <div className="col-5">
             <div className="col-6 FiveDaySection">
               <h3 className="FiveDayTitle">5 Day Forecast</h3>
-              <FiveDay coord={props.data.coord} weatherUnit={weatherUnit}/>
+              <FiveDay coord={data.coord} weatherUnit={weatherUnit}/>
             </div>
           </div>
         </div>

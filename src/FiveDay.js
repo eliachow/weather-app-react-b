@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import FiveData from "./FiveData";
 
@@ -11,6 +11,10 @@ export default function (props) {
     setFiveDayData(response.data.daily);
     setLoaded(true);
   }
+
+  useEffect(() => {
+    setLoaded(false);
+  },[props.coord])
 
   if (loaded) {
     return (
