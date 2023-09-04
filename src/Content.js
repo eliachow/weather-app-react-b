@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Content.css";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
@@ -8,6 +8,8 @@ export default function Content(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
   const [weatherUnit, setWeatherUnit] = useState("celsius")
+
+  const apiKey = process.env.REACT_APP_API_KEY;
 
   function handleResponse(response) {
     setWeatherData({
@@ -24,8 +26,9 @@ export default function Content(props) {
     });
   }
 
+  // searchbar
+
   const search = async () => {
-    const apiKey = process.env.REACT_APP_API_KEY;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     try {
@@ -46,9 +49,34 @@ export default function Content(props) {
     document.getElementById("searchValue").value = "";
   }
   
-
+  // set city to searchbar value
   function handleCityChange(e) {
     setCity(e.target.value);
+  }
+
+  // current location
+
+  const searchLocation = async (lat, lon) => {
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`
+
+    try {
+      const response = await axios.get(apiUrl)
+      const currentCity = response.data.name
+      setCity(currentCity)
+    } catch (error) {
+      console.error("Error fetching weather data: ", error)
+    }
+  }
+
+
+  function getLocation(position) {
+    const lat = position.coords.latitude
+    const lon = position.coords.longitude
+    searchLocation(lat, lon)
+  }
+
+  function fetchGeolocation() {
+    navigator.geolocation.getCurrentPosition(getLocation)
   }
 
   // update celsius & fahrenheit
@@ -89,6 +117,7 @@ export default function Content(props) {
                   type="submit"
                   className="form-control button"
                   value={"Current Location"}
+                  onClick={fetchGeolocation}
                 />
               </div>
             </form>
