@@ -25,7 +25,7 @@ export default function Content(props) {
   }
 
   function search() {
-    const apiKey = "291d093572471cc9cd6958074405d546";
+    const apiKey = process.env.REACT_APP_API_KEY;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse); 
   }
@@ -33,7 +33,7 @@ export default function Content(props) {
   function handleSubmit(event) {
     event.preventDefault();
     search(city);
-    
+    // clear searchbar upon submit
     document.getElementById("searchValue").value = "";
   }
   

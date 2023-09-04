@@ -35,7 +35,7 @@ export default function (props) {
       </div>
     );
   } else {
-    let apiKey = "291d093572471cc9cd6958074405d546";
+    let apiKey = process.env.REACT_APP_API_KEY;
     let lon = props.coord.lon;
     let lat = props.coord.lat;
     let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
