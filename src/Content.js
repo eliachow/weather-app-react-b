@@ -24,10 +24,19 @@ export default function Content(props) {
     });
   }
 
-  function search() {
+  const search = async () => {
     const apiKey = process.env.REACT_APP_API_KEY;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse); 
+
+    try {
+      const response = await axios.get(apiUrl)
+      handleResponse(response)
+    } catch (error) {
+      console.error("Error fetching weather data: ", error);
+      if (error.message === 'Request failed with status code 404') {
+        alert ("Sorry, city not found. Please try again.")
+      }
+    }
   }
 
   function handleSubmit(event) {
