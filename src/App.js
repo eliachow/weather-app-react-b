@@ -1,6 +1,6 @@
-import "./App.css";
+import "./styles/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Content from "./Content";
+import Content from "./components/Content"
 
 export default function App() {
   return (
