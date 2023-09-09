@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
-import "./Content.css";
+import React, { useState } from "react";
 import axios from "axios";
+import "../styles/Content.css";
 import WeatherInfo from "./WeatherInfo";
-import cloudVideo from "./media/cloudVideo.mp4";
+import cloudVideo from "../media/cloudVideo.mp4";
+
 
 export default function Content(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });

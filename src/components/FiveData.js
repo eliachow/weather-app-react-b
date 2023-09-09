@@ -1,6 +1,6 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
-import "./FiveData.css";
+import "../styles/FiveData.css"
 
 export default function FiveData(props) {
   const { weatherUnit } = props;
@@ -45,7 +45,7 @@ export default function FiveData(props) {
   return (
     <div className="FiveData">
       <span className="col-4 Day">{day()}</span>
-      <span className="col-4 icon">
+      <span className="col-4 FiveDayIcon">
         <WeatherIcon code={props.data.weather[0].icon} />
       </span>
       <span className="col-4 DayTemp">

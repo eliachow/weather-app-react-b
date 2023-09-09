@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./WeatherInfo.css";
+import "../styles/WeatherInfo.css";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
