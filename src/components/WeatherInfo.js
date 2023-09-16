@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "../styles/WeatherInfo.css";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
@@ -28,8 +27,8 @@ export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo ">
       <div className="CenterContent">
-        <div className="row subCenterContent">
-          <div className="col-7">
+        
+          <div className="col-8 LeftColumn">
             <div className="MainData">
               <h1 className="MainCity">{data.city}</h1>
               <h3>
@@ -72,13 +71,13 @@ export default function WeatherInfo(props) {
               <Hourly coord={data.coord} weatherUnit={weatherUnit}/>
             </div>
           </div>
-          <div className="col-5">
-            <div className="col-6 FiveDaySection">
+          <div className="col-4 RightColumn">
+            <div className="FiveDaySection">
               <h3 className="FiveDayTitle">5 Day Forecast</h3>
               <FiveDay coord={data.coord} weatherUnit={weatherUnit}/>
             </div>
           </div>
-        </div>
+        
       </div>
     </div>
   );

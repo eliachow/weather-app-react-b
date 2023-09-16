@@ -121,11 +121,10 @@ export default function Content(props) {
                   onClick={fetchGeolocation}
                 />
               </div>
-            </form>
-
-            <WeatherInfo data={weatherData} getWeatherUnit={getWeatherUnit} weatherUnit={weatherUnit}/>
+            </form>   
           </div>
-        
+          <WeatherInfo data={weatherData} getWeatherUnit={getWeatherUnit} weatherUnit={weatherUnit}/>
+
         <footer>
             Open source code by 
             {" "}
@@ -135,8 +134,7 @@ export default function Content(props) {
             rel="noopener noreferrer"
             className="nameLink">
             eChow
-          </a>
-          
+          </a>          
         </footer>
         </div>
       </div>
