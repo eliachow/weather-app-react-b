@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "../styles/Hourly.css";
 import Axios from "axios";
 import WeatherIcon from "./WeatherIcon";
 import Hour from "./Hour";

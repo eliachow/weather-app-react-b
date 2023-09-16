@@ -1,6 +1,5 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
-import "../styles/FiveData.css"
 
 export default function FiveData(props) {
   const { weatherUnit } = props;

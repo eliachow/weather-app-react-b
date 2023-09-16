@@ -1,7 +1,6 @@
 import React from "react";
 //AKA WeatherForecastDay.js
 import WeatherIcon from "./WeatherIcon";
-import "../styles/Hour.css";
 
 export default function Hour(props) {
   const { weatherUnit } = props;
