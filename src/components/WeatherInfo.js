@@ -32,7 +32,7 @@ export default function WeatherInfo(props) {
             <div className="MainData">
               <h1 className="MainCity">{data.city}</h1>
               <h3>
-                <span>
+                <span className="Date">
                   <FormattedDate date={currentDateTime} />
                 </span>
               </h3>
@@ -46,22 +46,22 @@ export default function WeatherInfo(props) {
                   <WeatherTemperature celsius={data.temperature} getWeatherUnit={getWeatherUnit} />
 
                   <div className="currentDetails">
-                    <span>
-                      <WiUmbrella size={40} color="white" />
+                    <span className="IconSymbols">
+                      <WiUmbrella color="white" />
                     </span>
                     <span className="text-capitalize">
                       {data.description}
                     </span>
                   </div>
                   <div className="currentDetails">
-                    <span>
-                      <WiHumidity size={40} color="white" />
+                    <span className="IconSymbols">
+                      <WiHumidity color="white" />
                     </span>
                     Humidity: <span>{data.humidity}%</span>
                   </div>
                   <div className="currentDetails">
-                    <span>
-                      <WiCloudyGusts size={40} color="white" />
+                    <span className="IconSymbols">
+                      <WiCloudyGusts color="white" />
                     </span>
                     Wind Speed: <WindSpeed kmh={data.wind} />
                   </div>

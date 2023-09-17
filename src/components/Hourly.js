@@ -24,7 +24,7 @@ export default function Hourly(props) {
         <h3 className="HourlyTitle">Hourly Forecast</h3>
         <div className="row">
           {hourlyData.map((hourlyForecast, index) => {
-            if (index > 0 && index < 8) {
+            if (index > 0 && index < 7) {
               return (<div className="col-sm HourlyData" key={index}>
                 <Hour data={hourlyForecast} weatherUnit={weatherUnit}/>
               </div>
