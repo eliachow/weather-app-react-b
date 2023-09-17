@@ -100,7 +100,7 @@ export default function Content(props) {
                 <input
                   type="search"
                   id="searchValue"
-                  className="form-control button"
+                  className="form-control searchBarEntry"
                   placeholder="Enter a city"
                   autoFocus="on"
                   onChange={handleCityChange} 
@@ -109,14 +109,15 @@ export default function Content(props) {
               <div className="col-3">
                 <input
                   type="submit"
-                  className="form-control button"
+                  className="form-control button-33"
+                  role="button"
                   value={"Search"}
                 />
               </div>
               <div className="col-3">
                 <input
                   type="submit"
-                  className="form-control button"
+                  className="form-control button-33"
                   value={"Current Location"}
                   onClick={fetchGeolocation}
                 />
