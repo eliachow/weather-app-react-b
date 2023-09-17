@@ -1,3 +1,7 @@
+/* App.css or your main CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Righteous&family=Syncopate:wght@400;700&display=swap');
+
+
 /* 📱 mobile styles */
 
 /* Index.css */
@@ -9,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  font-family: 'Syncopate', sans-serif;
 }
 
 
@@ -61,12 +66,12 @@ video {
 footer {
   padding: 2%;
   text-align: center;
+  font-size: .75rem;
 }
 
 .nameLink {
   text-decoration: none;
   color: #aef2ff;
-  font-size: large;
 }
 
 .nameLink:hover {
@@ -88,9 +93,11 @@ footer {
 }
 
 
+
 /* ---------- nav bar ---------- */
 .HeaderTitle {
-  font-size: 3.5rem;
+  font-size: 6vw;
+  font-weight: bold;
   padding-left: 10%;
   padding-bottom: 2%;
   padding-top: 2%;
@@ -111,6 +118,10 @@ footer {
   box-shadow: 0px 3px 3px rgb(255, 240, 37);
 }
 
+.Date {
+  font-size: 1rem;
+}
+
 
 /* FiveData.css */
 .FiveDaySection {
@@ -121,6 +132,7 @@ footer {
 .FiveDayTitle {
   padding-top: 12%;
   padding-bottom: 3%;
+  font-size: 4vw;
 }
 
 .FiveDayCard {
@@ -167,6 +179,10 @@ footer {
   font-size: 5em;
 }
 
+.IconSymbols {
+  font-size: 1.5rem;
+}
+
 /* Hourly.css */
 .HourlyData {
   text-align: center;
@@ -184,32 +200,33 @@ footer {
 
 
 .MainCity {
-  font-size: 4em;
+  font-size: 5vw;
 }
 
 .MainIconAndData {
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .MainWeatherIcon {
-  font-size: 15em;
+  font-size: 25vw;
   line-height: 0;
 }
 
 .MainTemp {
-  font-size: 4em;
+  font-size: 2rem;
 }
 
 .currentDetails {
-  font-size: 1.5em;
+  font-size: .75rem;
 }
 
 /* WeatherTemperature.css */
 .Unit {
-  font-size: 2em;
+  font-size: 1em;
 }
 
 .unitLink {
@@ -237,6 +254,16 @@ footer {
   flex-direction: column;
 }
 
+ .MainIconAndData {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+ }
+
+ .HourlyTitle {
+  font-size: 4vw;
+ }
+
 
 /* ipad styles 820 */
 
@@ -250,16 +277,64 @@ footer {
     justify-content: space-between;
   }
 
+ 
+
   .HeaderTitle {
-    font-size: 5em;
+    font-size: 4vw;
+  }
+
+  .MainCity {
+    font-size: 3vw;
+  }
+
+  .Date {
+    font-size: 1.5rem;
   }
 
   .LeftColumn {
      flex: 2;
   }
+
+  .MainIconAndData {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .MainWeatherIcon {
+    font-size: 15em;
+    line-height: 0;
+  }
+
+  .MainTemp {
+    font-size: 4em;
+  }
+
+  .Unit {
+    font-size: 2em;
+  }
+
+  .currentDetails {
+    font-size: 1.5em;
+  }
+
+  .IconSymbols {
+    font-size: 3.5rem;
+  }
+
+  .HourlyTitle {
+    font-size: 1.75vw;
+  }
     
   .RightColumn {
     flex: 1;
+  }
+
+  .FiveDayTitle {
+    font-size: 1.75vw;
+  }
+
+  footer {
+    font-size: 1rem;
   }
 
 }
