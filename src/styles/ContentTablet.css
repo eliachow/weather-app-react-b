@@ -12,7 +12,7 @@
     font-size: 1.1rem;
   }
 
-  .Tablet {
+  .MainLeft, .MainRight {
     flex: 0 0 40%;
     max-width: 40%;
     padding: 0;

@@ -331,6 +331,7 @@ footer {
   text-decoration: none;
   color: rgba(255, 202, 177);
   font-size: .7em;
+  font-weight: bold;
 }
 
 .unitLink:hover {
