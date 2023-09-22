@@ -1,0 +1,61 @@
+@media (min-width: 768px) {
+  .searchBarEntry{
+    font-size: .8rem;
+  }
+
+  .button-33 {
+    font-size: .9rem;
+    line-height: 4px;
+  }
+
+  .Date {
+    font-size: 1.1rem;
+  }
+
+  .Tablet {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding: 0;
+  }
+
+  .MainTemp {
+    font-size: 3rem;
+  }
+
+  .Unit {
+    font-size: 2rem;
+  }
+
+  .IconSymbols {
+    font-size: 2.5rem;
+  }
+
+  .currentDetails {
+    font-size: .8rem;
+  }
+
+  .HourlyTitle {
+    font-size: 1.3rem;
+  }
+
+  .FiveDayTitle {
+    font-size: 1.3rem;
+    padding-top: 5%;
+  }
+
+  .icon, .FiveDayIcon {
+    font-size: 4em;
+  }
+
+  .HourlyInfo {
+    font-size: .9rem;
+  }
+
+  .Day {
+    font-size: 1.5rem;
+  }
+
+  .DayTemp {
+    font-size: 1.3rem;
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../styles/ContentMobile.css";
+import "../styles/ContentTablet.css"
 import "../styles/ContentDesk.css"
 import WeatherInfo from "./WeatherInfo";
 import cloudVideo from "../media/cloudVideo.mp4";
