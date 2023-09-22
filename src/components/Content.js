@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../styles/Content.css";
+import "../styles/ContentMobile.css";
+import "../styles/ContentDesk.css"
 import WeatherInfo from "./WeatherInfo";
 import cloudVideo from "../media/cloudVideo.mp4";
 
@@ -96,7 +97,7 @@ export default function Content(props) {
           <div className="Header">
             <div className="HeaderTitle">Weather Watch</div>
             <form className="row SearchBar" onSubmit={handleSubmit}>
-              <div className="col-6">
+              <div className="col-6 SearchBarRow">
                 <input
                   type="search"
                   id="searchValue"
@@ -106,7 +107,7 @@ export default function Content(props) {
                   onChange={handleCityChange} 
                 />
               </div>
-              <div className="col-3">
+              <div className="col-3 SearchBarRow">
                 <input
                   type="submit"
                   className="form-control button-33"
@@ -114,7 +115,7 @@ export default function Content(props) {
                   value={"Search"}
                 />
               </div>
-              <div className="col-3">
+              <div className="col-3 SearchBarRow">
                 <input
                   type="submit"
                   className="form-control button-33"

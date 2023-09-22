@@ -1,0 +1,91 @@
+/* desktop lrg styles 1375 */
+@media (min-width: 1375px) {
+  .CenterContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+
+  .HeaderTitle {
+    font-size: 4vw;
+  }
+
+  .MainCity {
+    font-size: 3vw;
+  }
+
+  .Date {
+    font-size: 1.5rem;
+  }
+
+  .LeftColumn {
+    flex: 2;
+  }
+
+  .MainIconAndData {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .MainWeatherIcon {
+    font-size: 15em;
+    line-height: 0;
+  }
+
+  .MainTemp {
+    font-size: 4em;
+    font-weight: bold;
+  }
+
+  .Unit {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .currentDetails {
+    font-size: 1.5em;
+  }
+
+  .IconSymbols {
+    font-size: 3.5rem;
+  }
+
+  .HourlyTitle {
+    font-size: 1.75vw;
+  }
+
+  .RightColumn {
+    flex: 1;
+  }
+
+  .FiveDayTitle {
+    font-size: 1.75vw;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+
+  .SearchBar {
+    padding: 0px 10% 5% 10%;
+    margin-right: 0px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .searchBarEntry {
+    font-size: 1rem;
+    border-radius: 50px;
+    padding: 7px 34px;
+    border-radius: 42px;
+    border-width: 1;
+  }
+
+  .button-33 {
+    padding: 11px 18px;
+    font-size: 18px;
+  }
+
+}
