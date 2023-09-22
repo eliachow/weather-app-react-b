@@ -25,7 +25,7 @@ export default function (props) {
               if (index < 5) {
               return(
               <li className="card FiveDayCard">
-                <div className="row" key={index}>
+                <div className="row FiveContent" key={index}>
                   <FiveData data={dailyForecast} weatherUnit={weatherUnit}/>
                 </div>
               </li>

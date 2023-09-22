@@ -29,13 +29,13 @@ export default function FiveData(props) {
     let day = date.getDay();
 
     let weekdays = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
+      "Sun",
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
     ];
 
     return weekdays[day];
@@ -49,9 +49,17 @@ export default function FiveData(props) {
       </span>
       <span className="col-4 DayTemp">
         {weatherUnit === "celsius" ? (
-          `${maxTemperatureCelsius()} / ${minTemperatureCelsius()}`
+          <>
+          {maxTemperatureCelsius()}
+          <br />
+          {minTemperatureCelsius()}
+          </>  
         ) : (
-          `${maxTemperatureFahrenheit()} / ${minTemperatureFahrenheit()}`
+          <>
+          {maxTemperatureFahrenheit()}
+          <br />
+          {minTemperatureFahrenheit()}
+          </>  
         )}
       </span>
     </div>

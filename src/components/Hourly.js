@@ -22,9 +22,9 @@ export default function Hourly(props) {
     return (
       <div className="Hourly">
         <h3 className="HourlyTitle">Hourly Forecast</h3>
-        <div className="row">
+        <div className="row HourlyContent">
           {hourlyData.map((hourlyForecast, index) => {
-            if (index > 0 && index < 7) {
+            if (index > 0 && index < 10) {
               return (<div className="col-sm HourlyData" key={index}>
                 <Hour data={hourlyForecast} weatherUnit={weatherUnit}/>
               </div>

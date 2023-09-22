@@ -33,10 +33,10 @@ export default function Hour(props) {
       <div className="icon">
         <WeatherIcon code={props.data.weather[0].icon} />
       </div>
-      <div>{convertTime(props.data.dt)}</div>
+      <div className="HourlyInfo">{convertTime(props.data.dt)}</div>
       {weatherUnit === "celsius" ? (
-        <div>{celsius()} °C</div>
-      ) : <div>{fahrenheit()} °F</div>}
+        <div className="HourlyInfo">{celsius()} °C</div>
+      ) : <div className="HourlyInfo">{fahrenheit()} °F</div>}
     </div>
   );
 }

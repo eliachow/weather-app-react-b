@@ -37,12 +37,12 @@ export default function WeatherInfo(props) {
                 </span>
               </h3>
               <div className="row MainIconAndData">
-                <div className="col-5">
+                <div className="col-4">
                   <div className="float-left MainWeatherIcon">
                     <WeatherIcon code={data.icon} />
                   </div>
                 </div>
-                <div className="col-6">
+                <div className="col-8">
                   <WeatherTemperature celsius={data.temperature} getWeatherUnit={getWeatherUnit} />
 
                   <div className="currentDetails">
