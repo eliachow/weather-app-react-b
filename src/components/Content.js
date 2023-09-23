@@ -60,12 +60,11 @@ export default function Content(props) {
   // current location
 
   const searchLocation = async (lat, lon) => {
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
 
     try {
       const response = await axios.get(apiUrl)
-      const currentCity = response.data.name
-      setCity(currentCity)
+      handleResponse(response)
     } catch (error) {
       console.error("Error fetching weather data: ", error)
     }
