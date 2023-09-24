@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import axios from "axios";
 import "../styles/ContentMobile.css";
 import "../styles/ContentTablet.css"
@@ -6,13 +6,44 @@ import "../styles/ContentDesk.css"
 import WeatherInfo from "./WeatherInfo";
 import cloudVideo from "../media/cloudVideo.mp4";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"; 
+
 
 export default function Content(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
-  const [weatherUnit, setWeatherUnit] = useState("celsius")
+  const [weatherUnit, setWeatherUnit] = useState("celsius");
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 
   const apiKey = process.env.REACT_APP_API_KEY;
+
+  // Handle screen width changes
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  // Conditionally render the button values
+  const searchButtonValue = screenWidth < 768 ? (
+    <>
+      <FontAwesomeIcon icon={faMagnifyingGlass} />
+    </>
+  ) : (
+    "Search"
+  )
+
+  const locationButtonValue = screenWidth < 768 ? (
+    "📍"
+  ) : (
+    "Current Location"
+  )
 
   function handleResponse(response) {
     setWeatherData({
@@ -95,7 +126,7 @@ export default function Content(props) {
         </div>
         <div className="PageContent">
           <div className="Header">
-            <div className="HeaderTitle">Weather Watch</div>
+            <div className="HeaderTitle">Weather Window</div>
             <form className="row SearchBar" onSubmit={handleSubmit}>
               <div className="col-6 SearchBarRow">
                 <input
@@ -111,15 +142,14 @@ export default function Content(props) {
                 <input
                   type="submit"
                   className="form-control button-33"
-                  role="button"
-                  value={"Search"}
+                  value={searchButtonValue}
                 />
               </div>
               <div className="col-3 SearchBarRow">
                 <input
                   type="submit"
                   className="form-control button-33"
-                  value={"Current Location"}
+                  value={locationButtonValue}
                   onClick={fetchGeolocation}
                 />
               </div>
