@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
-import WeatherIcon from "./WeatherIcon";
 import Hour from "./Hour";
 
 export default function Hourly(props) {
@@ -28,7 +27,9 @@ export default function Hourly(props) {
               return (<div className="col-sm HourlyData" key={index}>
                 <Hour data={hourlyForecast} weatherUnit={weatherUnit}/>
               </div>
-          )}})}
+          )} else {
+            return null;
+          }})}
          
         </div>
       </div>
