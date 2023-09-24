@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import FiveData from "./FiveData";
 
-export default function (props) {
+export default function FiveDay(props) {
   const { weatherUnit } = props;
   let [loaded, setLoaded] = useState(false);
   let [fiveDayData, setFiveDayData] = useState(null);
@@ -29,7 +29,9 @@ export default function (props) {
                   <FiveData data={dailyForecast} weatherUnit={weatherUnit}/>
                 </div>
               </li>
-            )}})}
+            )} else {
+              return null;
+            }})}
           </ul> 
         </div>
       </div>
