@@ -5,9 +5,8 @@ import "../styles/ContentTablet.css"
 import "../styles/ContentDesk.css"
 import WeatherInfo from "./WeatherInfo";
 import cloudVideo from "../media/cloudVideo.mp4";
+import { FaSearch, FaMapMarkerAlt } from "react-icons/fa";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"; 
 
 
 export default function Content(props) {
@@ -32,15 +31,13 @@ export default function Content(props) {
 
   // Conditionally render the button values
   const searchButtonValue = screenWidth < 768 ? (
-    <>
-      <FontAwesomeIcon icon={faMagnifyingGlass} />
-    </>
+      <FaSearch />
   ) : (
     "Search"
   )
 
   const locationButtonValue = screenWidth < 768 ? (
-    "📍"
+    <FaMapMarkerAlt />
   ) : (
     "Current Location"
   )
@@ -61,7 +58,6 @@ export default function Content(props) {
   }
 
   // searchbar
-
   const search = async () => {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -89,7 +85,6 @@ export default function Content(props) {
   }
 
   // current location
-
   const searchLocation = async (lat, lon) => {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
 
@@ -139,19 +134,21 @@ export default function Content(props) {
                 />
               </div>
               <div className="col-3 SearchBarRow">
-                <input
+                <button
                   type="submit"
                   className="form-control button-33"
-                  value={searchButtonValue}
-                />
+                >
+                  {searchButtonValue}
+                </button>
               </div>
               <div className="col-3 SearchBarRow">
-                <input
+                <button
                   type="submit"
                   className="form-control button-33"
-                  value={locationButtonValue}
                   onClick={fetchGeolocation}
-                />
+                >
+                  {locationButtonValue}
+                </button>
               </div>
             </form>   
           </div>
