@@ -6,7 +6,13 @@ Weather Window is an intuitive single-page weather forecast application that all
 
 [Weather Window](https://fluffy-gnome-a0492a.netlify.app/) is hosted on Netlify.
 
-[INPUT SCREENSHOTS/GIFS]
+### Desktop View
+
+![Weather Window Desktop Preview](./src/media/WWDektopPreview.gif)
+
+### Mobie View
+
+![Weather Window Mobile Preview](./src/media/WWMobilePreview.gif)
 
 ## Contributors
 
